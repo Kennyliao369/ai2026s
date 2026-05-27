@@ -13,7 +13,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
 
-<title>作業五</title>
+<title>作業五
+</title>
 <!-- https://alexlenail.me/NN-SVG/about.html -->
 <link rel="icon" href="../hw00/favicon.svg"/>
 <style type="text/css">
@@ -153,7 +154,7 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      這次作業使用 Civitai 裡面的文生圖模型，配合 ComfyUI 建立工作流，讓我們可視化文生圖所需要經過的處理步驟。過程非常有趣，透過切換不同的模型與提示詞，製作出理想的圖片。之前以為使用生圖需要很大的計算量、與很大的顯存空間。但是實驗後，發現原來 Colab 分配的性能，也能夠輕鬆生圖，讓我對現代硬件與模型優化有了不同的看法。
     </div>
   </div>
 
@@ -169,22 +170,22 @@
         </tr>
         <tr>
           <td rowspan="4" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>4</td>
-          <td>Simple baseline - 描述</td>
+          <td>Simple baseline - 完成ComfyUI建置</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
           <td id='m2'>4</td>
-          <td>Medium baseline - 描述</td>
+          <td>Medium baseline - 完成芙莉蓮文生圖</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
           <td id='m3'>2</td>
-          <td>Strong baseline - 描述</td>
+          <td>Strong baseline - 替換模型完成辛梅爾文生圖</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
           <td id='m4'>-10</td>
           <td>沒有寫100字心得</td>
         </tr>
@@ -194,18 +195,52 @@
   </div>
 
   <!-- ------------------------------------------------>
-  <div class="row hw12 bottomrow">
-    <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+  <div class="row hw12">
+    <div class="col-md-12 twenty" style="background-color:#00AC48;">    
+      <figure>
+        <figcaption>ComfyUI+工作流</figcaption>
+            <img src="ComfyUI.png" width="100%"/>
+        </figure>
     </div>
   </div>
 
   <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty" style="background-color:#ff0000;"> 
+      <figure>
+        <figcaption>完成芙莉蓮、欣梅爾Checkpoint文生圖</figcaption>
+        <a href="https://civitai.com/models/820208/obsession-illustrious-xl">Checkpoint連結</a>
+        <br>
+        <a href="https://civitai.com/models/1209474/test-lora?modelVersionId=1373925">LoRA連結</a>
+        <p>1344 * 768</p>
+        <p>very awa, anime screencap, masterpiece, best quality, 1boy, 1girl, frieren, himmel (sousou no frieren), sousou no frieren, outdoors, forest, grassy ground, frieren lying on her back on the forest grass, himmel above frieren, leaning down to kiss her, kissing, gentle kiss, lips touching, romantic atmosphere, eyes closed, (himmel's right hand holding frieren's neck:1.4), (one hand on frieren's throat:1.4), (fingers visible on her neck:1.3), (hand pressing lightly against her neck:1.3), intimate pose, medium shot, side view, visible hands, dappled sunlight, day, soft lighting, tender expression, light blue hair, cape, capelet, earrings, kesyeru
+        </p>
+        <p>nsfw, lowres, bad anatomy, bad hands, hidden hands, hands not visible, missing fingers, extra digits, fewer digits, extra hands, cropped hands, text, error, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, artist name, deformed face, bad eyes
+        </p>
+        <img src="img1.png" width="100%"/>
+      </figure>
+    </div>
+  </div>
 
   <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty" style="background-color:#7030a0;">    
+      <figure>
+        <figcaption>替換Ckeckpoint、LoRA完成芙莉蓮、欣梅爾文生圖</figcaption>
+        <a href="https://civitai.com/models/1135145/kokio-illu?modelVersionId=1298658">Checkpoint連結</a>
+        <br>
+        <a href="https://civitai.com/models/1201355/r754496-or-shiiros-styles-or-niji">LoRA連結</a>
+        <p>1344 * 768</p>
+        <p>&lt;lora:r17329_illu-000017:1&gt;, r17329_illu, masterpiece, newest, absurdres, incredibly absurdres, 1boy, solo, himmel \(sousou no frieren\), sousou no frieren, light blue hair, cape, capelet, earrings, crying, tears, open mouth, shouting, desperate expression, emotional expression, holding sword, swinging sword, powerful sword swing, slashing, dynamic pose, action pose, motion blur, upper body, looking forward, dark_theme, abstract background, dark forest, spider lily, red spider lily, lycoris radiata, spiders, spider web, cobweb, black mist, ominous atmosphere, tragic atmosphere, dramatic lighting, dappled darkness, depth of field, blurry background, chromatic aberration
+        </p>
+        <p>worst quality, bad quality, low quality, anatomical nonsense, bad anatomy, bad hands, interlocked fingers, extra fingers, missing fingers, fewer digits, extra arms, extra sword, broken sword, deformed face, bad eyes, closed mouth, smiling, calm expression, watermark, text, signature, username, blurry face
+        </p>
+        <img src="img2.png" width="100%"/>
+      </figure>
+    </div>
+  </div>
 
+  <!-- ------------------------------------------------>
 
 <script>
   $(function() {
