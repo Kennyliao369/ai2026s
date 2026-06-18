@@ -153,7 +153,9 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      我覺得本次作業有點困擾，尤其是在模型替換的部分，模型看一看，看到想要的，結果發現架構不合。架構就算合適也不一定就能順利運作，總之就是會有各種原因會讓結果糊掉。不過最後我挑選了比較成熟的模型，後來就順利能生成了。<br>
+      不過我發現這模型，基本上都不能做動態動作呀，一方面是文字對於動作的過程無法好好描述，二是這個架構就是沒辦法做連貫的動作。<br>
+      讓後我這次是跑在本地，真是受不了colab的穩定性太差了，驗證模型能不能動都要跑個半天，還是本地舒服。
     </div>
   </div>
 
@@ -169,22 +171,22 @@
         </tr>
         <tr>
           <td rowspan="4" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>4</td>
-          <td>Simple baseline - 描述</td>
+          <td>Simple baseline - Comfy UI 環境設定完成</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
           <td id='m2'>4</td>
-          <td>Medium baseline - 描述</td>
+          <td>Medium baseline - 生成角色的圖片</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
           <td id='m3'>2</td>
-          <td>Strong baseline - 描述</td>
+          <td>Strong baseline - 生成完整角色動畫</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
           <td id='m4'>-10</td>
           <td>沒有寫100字心得</td>
         </tr>
@@ -195,13 +197,87 @@
 
   <!-- ------------------------------------------------>
   <div class="row hw12 bottomrow">
-    <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+    <div class="col-md-12 twenty" style="background-color:#00AC48;">
+      <figcaption>Comfy UI 環境設定完成</figcaption>
+      <a href="https://civitai.com/models/4384/dreamshaper">CheckPoint: DreamShaper</a><br>
+      <a href="https://huggingface.co/wangfuyun/AnimateLCM/blob/main/AnimateLCM_sd15_t2v_lora.safetensors">LoRA: AnimateLCM</a><br>  
+      <img src="1.png"  width="100%"><br>
+    </div>
+  </div>
+  
+  <div class="row hw12 bottomrow">
+    <div class="col-md-4 twenty" style="background-color:#ff0000;">
+      <figcaption>生成角色的圖片 - 1</figcaption>
+      <img src="2.png"  width="100%"><br>
+    </div>
+    <div class="col-md-4 twenty" style="background-color:#ff0000;">
+      <figcaption>生成角色的圖片 - 2</figcaption>
+      <img src="5.png"  width="100%"><br>
+    </div>
+    <div class="col-md-4 twenty" style="background-color:#ff0000;">
+      <figcaption>生成角色的圖片 - 3</figcaption>
+      <img src="7.png"  width="100%"><br>
     </div>
   </div>
 
+  
+  <div class="row hw12 bottomrow">
+    <div class="col-md-4 twenty" style="background-color:#7030a0;">
+      <figcaption>生成完整角色動畫 - 1</figcaption>
+      <img src="3.gif" width="100%"><br>
+      <td> 使用提示詞:
+          "0" :"masterpiece, best quality, highly detailed, anime, dark fantasy, soulslike, elden ring style, 1girl, solo, slim girl, slender, long black hair, holding katana, katana at the side, light armor, shoulder armor, pleated skirt, long pleated skirt, epic landscape, distant chinese architecture, ancient pagoda, far background, swirling dust, dust storm, hazy, yellow tones, sepia tones, high contrast, dramatic lighting, depth of field, atmospheric, standing still, holding katana down, calm, looking into the distance",
+          "15" :"masterpiece, best quality, highly detailed, anime, dark fantasy, soulslike, elden ring style, 1girl, solo, slim girl, slender, long black hair, holding katana, katana at the side, light armor, shoulder armor, pleated skirt, long pleated skirt, epic landscape, distant chinese architecture, ancient pagoda, far background, swirling dust, dust storm, hazy, yellow tones, sepia tones, high contrast, dramatic lighting, depth of field, atmospheric, standing still, hair blowing in the wind, dust drifting past",
+          "30" :"masterpiece, best quality, highly detailed, anime, dark fantasy, soulslike, elden ring style, 1girl, solo, slim girl, slender, long black hair, holding katana, katana at the side, light armor, shoulder armor, pleated skirt, long pleated skirt, epic landscape, distant chinese architecture, ancient pagoda, far background, swirling dust, dust storm, hazy, yellow tones, sepia tones, high contrast, dramatic lighting, depth of field, atmospheric, standing, lifting the katana slightly, skirt fluttering in the wind",
+          "45" :"masterpiece, best quality, highly detailed, anime, dark fantasy, soulslike, elden ring style, 1girl, solo, slim girl, slender, long black hair, holding katana, katana at the side, light armor, shoulder armor, pleated skirt, long pleated skirt, epic landscape, distant chinese architecture, ancient pagoda, far background, swirling dust, dust storm, hazy, yellow tones, sepia tones, high contrast, dramatic lighting, depth of field, atmospheric, standing, holding katana in front, ready stance, hair and skirt blowing",
+          "60" :"masterpiece, best quality, highly detailed, anime, dark fantasy, soulslike, elden ring style, 1girl, solo, slim girl, slender, long black hair, holding katana, katana at the side, light armor, shoulder armor, pleated skirt, long pleated skirt, epic landscape, distant chinese architecture, ancient pagoda, far background, swirling dust, dust storm, hazy, yellow tones, sepia tones, high contrast, dramatic lighting, depth of field, atmospheric, standing, looking to the side, calm expression, dust swirling around",
+          "75" :"masterpiece, best quality, highly detailed, anime, dark fantasy, soulslike, elden ring style, 1girl, solo, slim girl, slender, long black hair, holding katana, katana at the side, light armor, shoulder armor, pleated skirt, long pleated skirt, epic landscape, distant chinese architecture, ancient pagoda, far background, swirling dust, dust storm, hazy, yellow tones, sepia tones, high contrast, dramatic lighting, depth of field, atmospheric, standing, lowering the katana down again, hair settling, wind",
+          "90" :"masterpiece, best quality, highly detailed, anime, dark fantasy, soulslike, elden ring style, 1girl, solo, slim girl, slender, long black hair, holding katana, katana at the side, light armor, shoulder armor, pleated skirt, long pleated skirt, epic landscape, distant chinese architecture, ancient pagoda, far background, swirling dust, dust storm, hazy, yellow tones, sepia tones, high contrast, dramatic lighting, depth of field, atmospheric, standing still, hair blowing in the wind, skirt fluttering, dust drifting",
+          "105" :"masterpiece, best quality, highly detailed, anime, dark fantasy, soulslike, elden ring style, 1girl, solo, slim girl, slender, long black hair, holding katana, katana at the side, light armor, shoulder armor, pleated skirt, long pleated skirt, epic landscape, distant chinese architecture, ancient pagoda, far background, swirling dust, dust storm, hazy, yellow tones, sepia tones, high contrast, dramatic lighting, depth of field, atmospheric, standing, looking into the distance, calm, dust swirling",
+          "119" :"masterpiece, best quality, highly detailed, anime, dark fantasy, soulslike, elden ring style, 1girl, solo, slim girl, slender, long black hair, holding katana, katana at the side, light armor, shoulder armor, pleated skirt, long pleated skirt, epic landscape, distant chinese architecture, ancient pagoda, far background, swirling dust, dust storm, hazy, yellow tones, sepia tones, high contrast, dramatic lighting, depth of field, atmospheric, standing tall, holding katana down, hair and skirt blowing in the wind, dramatic"
+          <br><br>
+          使用負面提示詞:
+          (bad quality, worst quality:1.2), sheer, transparent, translucent, revealing, wet clothes
+        </td>
+    </div>
+    <div class="col-md-4 twenty" style="background-color:#7030a0;">
+      <figcaption>生成完整角色動畫 - 2</figcaption>
+      <img src="4.gif" width="100%"><br>
+      <td> 使用提示詞:
+          "0" :"masterpiece, best quality, highly detailed, anime, 1girl, solo, blonde hair, long wavy hair, blue eyes, red dress, determined expression, holding handgun, gun, action pose, night city, neon lights, bokeh background, vibrant colors, high contrast, sharp focus, dynamic, cel shading, aiming the handgun forward, both hands on gun, one eye closed, taking aim",
+          "15" :"masterpiece, best quality, highly detailed, anime, 1girl, solo, blonde hair, long wavy hair, blue eyes, red dress, determined expression, holding handgun, gun, action pose, night city, neon lights, bokeh background, vibrant colors, high contrast, sharp focus, dynamic, cel shading, aiming steady, finger on the trigger, tense, focused",
+          "30" :"masterpiece, best quality, highly detailed, anime, 1girl, solo, blonde hair, long wavy hair, blue eyes, red dress, determined expression, holding handgun, gun, action pose, night city, neon lights, bokeh background, vibrant colors, high contrast, sharp focus, dynamic, cel shading, firing the gun, muzzle flash, bright burst, motion blur",
+          "45" :"masterpiece, best quality, highly detailed, anime, 1girl, solo, blonde hair, long wavy hair, blue eyes, red dress, determined expression, holding handgun, gun, action pose, night city, neon lights, bokeh background, vibrant colors, high contrast, sharp focus, dynamic, cel shading, recoil, gun kicking upward, smoke from barrel, hair flowing",
+          "60" :"masterpiece, best quality, highly detailed, anime, 1girl, solo, blonde hair, long wavy hair, blue eyes, red dress, determined expression, holding handgun, gun, action pose, night city, neon lights, bokeh background, vibrant colors, high contrast, sharp focus, dynamic, cel shading, lowering gun back to aim, smoke drifting, focused eyes",
+          "75" :"masterpiece, best quality, highly detailed, anime, 1girl, solo, blonde hair, long wavy hair, blue eyes, red dress, determined expression, holding handgun, gun, action pose, night city, neon lights, bokeh background, vibrant colors, high contrast, sharp focus, dynamic, cel shading, turning and aiming to the side, hair flowing, dress fluttering",
+          "90" :"masterpiece, best quality, highly detailed, anime, 1girl, solo, blonde hair, long wavy hair, blue eyes, red dress, determined expression, holding handgun, gun, action pose, night city, neon lights, bokeh background, vibrant colors, high contrast, sharp focus, dynamic, cel shading, firing again, big muzzle flash, bright light, strong motion blur",
+          "105" :"masterpiece, best quality, highly detailed, anime, 1girl, solo, blonde hair, long wavy hair, blue eyes, red dress, determined expression, holding handgun, gun, action pose, night city, neon lights, bokeh background, vibrant colors, high contrast, sharp focus, dynamic, cel shading, recoil, smoke, wind blowing dress and hair, dramatic",
+          "119" :"masterpiece, best quality, highly detailed, anime, 1girl, solo, blonde hair, long wavy hair, blue eyes, red dress, determined expression, holding handgun, gun, action pose, night city, neon lights, bokeh background, vibrant colors, high contrast, sharp focus, dynamic, cel shading, lowering the gun, confident smirk, smoke drifting, hair settling"
+          <br><br>
+          使用負面提示詞:
+          (bad quality, worst quality:1.2), sheer, transparent, translucent, revealing, wet clothes
+      </td>
+    </div>
+    <div class="col-md-4 twenty" style="background-color:#7030a0;">
+      <figcaption>生成完整角色動畫 - 3</figcaption>
+      <img src="6.gif" width="100%"><br>
+      <td> 使用提示詞:
+          "0" :"masterpiece, best quality, highly detailed, anime, 1boy, solo, cowboy, western, cowboy hat, brown long coat, leather vest, revolver, holster, gun belt, dusty desert town street, high noon, golden hour, sunset, warm tones, sepia tones, dramatic backlighting, depth of field, blowing dust, standing still, tense standoff, hand hovering over holster, narrowed eyes, staring down the opponent",
+          "15" :"masterpiece, best quality, highly detailed, anime, 1boy, solo, cowboy, western, cowboy hat, brown long coat, leather vest, revolver, holster, gun belt, dusty desert town street, high noon, golden hour, sunset, warm tones, sepia tones, dramatic backlighting, depth of field, blowing dust, fingers twitching near the holster, tension, sweat, focused glare",
+          "30" :"masterpiece, best quality, highly detailed, anime, 1boy, solo, cowboy, western, cowboy hat, brown long coat, leather vest, revolver, holster, gun belt, dusty desert town street, high noon, golden hour, sunset, warm tones, sepia tones, dramatic backlighting, depth of field, blowing dust, hand grabbing the revolver grip, starting to draw, leaning forward",
+          "45" :"masterpiece, best quality, highly detailed, anime, 1boy, solo, cowboy, western, cowboy hat, brown long coat, leather vest, revolver, holster, gun belt, dusty desert town street, high noon, golden hour, sunset, warm tones, sepia tones, dramatic backlighting, depth of field, blowing dust, drawing the revolver from the holster fast, quick draw, strong motion blur, dust kicking up",
+          "60" :"masterpiece, best quality, highly detailed, anime, 1boy, solo, cowboy, western, cowboy hat, brown long coat, leather vest, revolver, holster, gun belt, dusty desert town street, high noon, golden hour, sunset, warm tones, sepia tones, dramatic backlighting, depth of field, blowing dust, raising the revolver, aiming forward, arm extended, sharp focus",
+          "75" :"masterpiece, best quality, highly detailed, anime, 1boy, solo, cowboy, western, cowboy hat, brown long coat, leather vest, revolver, holster, gun belt, dusty desert town street, high noon, golden hour, sunset, warm tones, sepia tones, dramatic backlighting, depth of field, blowing dust, firing the revolver, muzzle flash, gunshot, gun smoke, motion blur",
+          "90" :"masterpiece, best quality, highly detailed, anime, 1boy, solo, cowboy, western, cowboy hat, brown long coat, leather vest, revolver, holster, gun belt, dusty desert town street, high noon, golden hour, sunset, warm tones, sepia tones, dramatic backlighting, depth of field, blowing dust, recoil, smoking barrel, gun smoke drifting, coat flowing in the wind",
+          "105" :"masterpiece, best quality, highly detailed, anime, 1boy, solo, cowboy, western, cowboy hat, brown long coat, leather vest, revolver, holster, gun belt, dusty desert town street, high noon, golden hour, sunset, warm tones, sepia tones, dramatic backlighting, depth of field, blowing dust, lowering the revolver slightly, smoke drifting, steady stance, calm",
+          "119" :"masterpiece, best quality, highly detailed, anime, 1boy, solo, cowboy, western, cowboy hat, brown long coat, leather vest, revolver, holster, gun belt, dusty desert town street, high noon, golden hour, sunset, warm tones, sepia tones, dramatic backlighting, depth of field, blowing dust, standing tall, revolver at the side, smoke clearing, coat and dust blowing in the wind, dramatic"
+          <br><br>
+          使用負面提示詞:
+          (bad quality, worst quality:1.2), sheer, transparent, translucent, revealing, wet clothes
+      </td>
+    </div>
+  </div>
+  <!-- ------------------------------------------------>
   <!-- ------------------------------------------------>
 
   <!-- ------------------------------------------------>
